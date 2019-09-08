@@ -1,0 +1,125 @@
+@import "../_mixin/mixin.scss";
+.magnifierBox {
+  position: relative;
+  width: 450px;
+  margin-top: 60px;
+}
+
+.magnifierBox .leftBox {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid #ddd;
+}
+
+.magnifierBox .leftBox .imgBox {
+  width: 300px;
+  height: 300px;
+}
+
+.magnifierBox .leftBox .clipBox {
+  width: 188px;
+  height: 143px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  opacity: 0.5;
+  display: none;
+  border: 1px solid #9e9e9e;
+  cursor: move;
+}
+.magnifierBox .leftBox .patch {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.magnifierBox .rightBox {
+  width: 500px;
+  height: 380px;
+  background: #fff;
+  position: absolute;
+  left: 450px;
+  top: -40px;
+  border: 1px solid #9e9e9e;
+  overflow: hidden;
+  display: none;
+}
+
+.rightBox img {
+  position: absolute;
+}
+
+.magnifierBox .options {
+  width: 389px;
+  height: 84px;
+  overflow: hidden;
+  margin: 20px auto;
+  position: relative;
+  > div {
+    height: 74px;
+    width: 341px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    > ul {
+      position: absolute;
+      > li {
+        float: left;
+        width: 70px;
+        height: 70px;
+        float: left;
+        margin: 0 5px;
+        border: #ddd solid 1px;
+        padding: 1px;
+        overflow: hidden;
+        &.active {
+          border: 1px solid #4c9605;
+        }
+        > img {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+  p {
+    width: 17px;
+    height: 72px;
+    line-height: 72px;
+    cursor: pointer;
+    border: 1px solid #e4e4e4;
+    position: relative;
+    &::after {
+      content: "";
+      display: inline-block;
+      border-width: 8px;
+      border-style: solid;
+      vertical-align: middle;
+    }
+  }
+  p.prevArrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    &::after {
+      content: "";
+      margin-left: -5px;
+      border-color: transparent #d7d7d7 transparent transparent;
+    }
+  }
+  p.nextArrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    &::after {
+      content: "";
+      margin-left: 5px;
+      border-color: transparent transparent transparent #d7d7d7;
+    }
+  }
+}

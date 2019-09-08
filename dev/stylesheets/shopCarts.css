@@ -1,0 +1,89 @@
+.goods_list {
+  margin: 20px auto; }
+  .goods_list li {
+    border: 1px solid #ccc; }
+    .goods_list li > div {
+      float: left;
+      padding: 10px;
+      height: 89px;
+      line-height: 89px;
+      text-align: center;
+      vertical-align: middle; }
+    .goods_list li > div.g1 {
+      width: 50px; }
+    .goods_list li > div.g2 {
+      width: 500px; }
+      .goods_list li > div.g2 > a:first-of-type {
+        width: 87px;
+        height: 87px;
+        display: inline-block;
+        border: 1px solid #e8e8e8; }
+        .goods_list li > div.g2 > a:first-of-type > img {
+          width: 80px;
+          vertical-align: middle; }
+      .goods_list li > div.g2 > a:last-of-type {
+        margin-left: 20px; }
+    .goods_list li > div.g3 {
+      width: 150px;
+      position: relative; }
+      .goods_list li > div.g3 > div {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1em; }
+        .goods_list li > div.g3 > div > div {
+          display: inline-block;
+          border: 1px solid #cacbcb; }
+          .goods_list li > div.g3 > div > div > span {
+            height: 22px;
+            line-height: 22px;
+            padding: 0 3px;
+            cursor: pointer; }
+          .goods_list li > div.g3 > div > div > input {
+            margin: 0 2px;
+            border: 0;
+            line-height: 22px;
+            height: 22px;
+            text-align: center;
+            border-right: 1px solid #cacbcb;
+            border-left: 1px solid #cacbcb;
+            width: 43px; }
+        .goods_list li > div.g3 > div > p {
+          margin-top: 8px; }
+    .goods_list li > div.g4 {
+      width: 200px;
+      font-weight: 700;
+      color: #000;
+      font-size: 14px; }
+      .goods_list li > div.g4 > div {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1em; }
+        .goods_list li > div.g4 > div p {
+          color: #898989;
+          font-size: 12px;
+          margin-top: 5px; }
+    .goods_list li > div.g5 {
+      width: 198px; }
+      .goods_list li > div.g5 a {
+        color: #666; }
+
+.pageCartBt {
+  margin-top: 30px;
+  height: 62px;
+  line-height: 62px;
+  background: #f5f5f5;
+  margin-bottom: 20px; }
+  .pageCartBt > div > strong.pageTotalPrice {
+    color: #e61212;
+    font-size: 18px;
+    font-weight: bold; }
+  .pageCartBt > div > a.gotoPay {
+    width: 213px;
+    display: inline-block;
+    background: #459d36;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px; }

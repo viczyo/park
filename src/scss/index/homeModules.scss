@@ -1,0 +1,281 @@
+@import "../_mixin/mixin.scss";
+div.dogModules {
+  margin-top: 30px;
+  h2.title {
+    padding-bottom: 10px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+    font-size: 20px;
+    background: url(../images/cate_5.png) no-repeat 0 0;
+    padding-left: 35px;
+  }
+  .content {
+    & > .fl {
+      width: 328px;
+      height: 477px;
+      position: relative;
+      .leftHot {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.8);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8ffffff, endColorstr=#c8ffffff);
+        width: 298px;
+        height: 148px;
+        left: 0;
+        bottom: 0;
+        padding: 15px;
+        .titleHot {
+          height: 30px;
+          line-height: 30px;
+          color: #666;
+          span {
+            margin: 0 15px 0 10px;
+            font-size: 14px;
+          }
+          span::before {
+            content: "";
+            display: inline-block;
+            width: 27px;
+            height: 27px;
+            margin-right: 5px;
+            vertical-align: middle;
+            background: url(../images/index-ico.png) no-repeat -113px -170px;
+          }
+        }
+        .titleHot::before,
+        .titleHot::after {
+          content: "";
+          display: inline-block;
+          width: 87px;
+          height: 1px;
+          background: #666;
+          vertical-align: middle;
+        }
+        ul {
+          margin-right: -18px;
+          li {
+            float: left;
+            width: 87px;
+            height: 24px;
+            line-height: 24px;
+            margin-top: 10px;
+            border-radius: 30px;
+            margin-right: 18px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            background: #ffffff;
+            text-align: center;
+            a {
+              display: block;
+            }
+            a:hover {
+              color: #248dcc;
+            }
+          }
+        }
+      }
+    }
+    & > .fr {
+      width: 872px;
+      height: 477px;
+      border-top: 1px solid #459d36;
+      position: relative;
+      .dogStapleFoodTab {
+        top: -35px;
+        right: 0;
+        width: 872px;
+        height: 35px;
+        position: absolute;
+        ul {
+          border: 1px solid #e7e7e7;
+          border-bottom: 0;
+          border-top: 0;
+          li {
+            float: left;
+            height: 33px;
+            line-height: 33px;
+            border-top: 1px solid #e7e7e7;
+            a {
+              border-right: 1px solid #e7e7e7;
+              padding: 0 15px;
+              font-size: 14px;
+            }
+            &:last-of-type a {
+              border-right: 0;
+            }
+            &:hover,
+            &.active {
+              height: 30px;
+              line-height: 30px;
+              border: 1px solid #459d36;
+              border-top: 3px solid #459d36;
+              border-bottom: 2px solid #fff;
+              a {
+                border-right: 0;
+              }
+            }
+          }
+        }
+      }
+      .contentBox {
+        > .popular {
+          border-right: 1px solid #e7e7e7;
+          .top {
+            .fl,
+            .fr {
+              border-left: 1px solid #e7e7e7;
+              border-bottom: 1px solid #e7e7e7;
+              overflow: hidden;
+              width: 388px;
+              height: 299px;
+              position: relative;
+              a {
+                img {
+                  @include compatibleTransition(transform 0.5s);
+                }
+                img:hover {
+                  @include compatibleTransform(translateX(-5px));
+                }
+                .description {
+                  position: absolute;
+                  top: 30px;
+                  left: 27px;
+                  p:first-of-type {
+                    color: #000;
+                    font-size: 16px;
+                  }
+                  p:last-of-type {
+                    margin-top: 5px;
+                    color: #f40;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+            .fr {
+              width: 481px;
+              height: 300px;
+              border-bottom: 0;
+              li {
+                width: 481px;
+                height: 149px;
+                position: relative;
+                border-bottom: 1px solid #e7e7e7;
+              }
+            }
+          }
+          .bottom {
+            li {
+              float: left;
+              position: relative;
+              width: 289px;
+              height: 175px;
+              border-left: 1px solid #e7e7e7;
+              border-bottom: 1px solid #e7e7e7;
+              overflow: hidden;
+              a {
+                img {
+                  @include compatibleTransition(transform 0.5s);
+                }
+                img:hover {
+                  @include compatibleTransform(translateX(-5px));
+                }
+                .description {
+                  position: absolute;
+                  top: 30px;
+                  left: 27px;
+                  p:first-of-type {
+                    color: #000;
+                    font-size: 16px;
+                  }
+                  p:last-of-type {
+                    margin-top: 5px;
+                    color: #f40;
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        > .otherTab {
+          display: none;
+          li {
+            float: left;
+            border-bottom: 1px solid #e7e7e7;
+            border-right: 1px solid #e7e7e7;
+            width: 197px;
+            padding: 10px;
+            height: 217px;
+            a {
+              img {
+                width: 136px;
+                height: 136px;
+                display: block;
+                @include compatibleTransition(transform 0.5s);
+                margin: 5px auto 15px;
+              }
+              img:hover {
+                @include compatibleTransform(translateY(-5px));
+              }
+              p:first-of-type {
+                height: 32px;
+                overflow: hidden;
+                color: #666;
+                font-weight: 400;
+              }
+              p:last-of-type {
+                color: #dd2727;
+                margin-top: 5px;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottomLogos {
+    border-right: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    li {
+      float: left;
+      width: 148px;
+      height: 66px;
+      line-height: 66px;
+      border-left: 1px solid #e7e7e7;
+      overflow: hidden;
+      text-align: center;
+      a {
+        img {
+          vertical-align: middle;
+        }
+        img:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+div.dogSnacks{
+  h2.title {
+    background: url(../images/cate_6.png) no-repeat 0 0;
+  }
+}
+div.dogHealthMedical{
+  h2.title {
+    background: url(../images/cate_49.png) no-repeat 0 0;
+  }
+}
+div.dogDailyUse{
+  h2.title {
+    background: url(../images/cate_54.png) no-repeat 0 0;
+  }
+}
+div.dogTractionClothingToys{
+  h2.title {
+    background: url(../images/cate_55.png) no-repeat 0 0;
+  }
+}

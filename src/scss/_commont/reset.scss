@@ -1,0 +1,26 @@
+h1,h2,h3,h4,h5,h6,p,body,ul,ol,dl,dd,input,hr,select,option,textarea,th,td{margin:0; padding:0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: #666;}
+em,i{font-style: normal;}
+h1,h2,h3,h4,h5,h6,b,strong{font-weight: normal;}
+input{outline: none;}
+img{border:0;}
+body{font-family:'Microsoft Yahei',Tahoma,Simsun;font-size:12px;}
+.fl {float: left;}
+.fr {float: right;}
+.clear:after{content:""; display:block; clear:both; height:0; visibility:hidden; }
+.clear{zoom:1;}
+.line_h:after{
+	content:"";
+	display: inline-block;
+	height: 100%;
+	width: 0;
+	vertical-align: middle;
+}
+.w1200{
+	width: 1200px;
+	margin: 0 auto;
+}
+.mt30{
+	margin-top: 30px;
+}

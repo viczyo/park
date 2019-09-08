@@ -1,0 +1,242 @@
+@import "../_mixin/mixin.scss";
+.spike {
+  margin-top: 30px;
+  .dailyScramble {
+    width: 328px;
+    height: 460px;
+    margin-bottom: 20px;
+    background: url(../images/everydayBgNew2.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    .timeTitle {
+      position: relative;
+      padding-top: 190px;
+      width: 83px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 auto;
+      background: url(../images/clock.png) left 198px no-repeat;
+      background-size: 24px 26px;
+      padding-left: 26px;
+      .ongoing {
+        position: absolute;
+        bottom: 25px;
+        right: -60px;
+        height: 23px;
+        width: 63px;
+        background: url(../images/jxz.png) center no-repeat;
+        background-size: 100%;
+      }
+    }
+    .rollingAD {
+      position: absolute;
+      width: 280px;
+      left: 24px;
+      bottom: 24px;
+      height: 32px;
+      overflow: hidden;
+      border-radius: 32px;
+      background: #ff7188;
+      ul {
+        position: absolute;
+        top: 0;
+        li {
+          width: 280px;
+          height: 32px;
+          line-height: 32px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          color: #fff;
+          p {
+            float: left;
+            margin-top: 3.5px;
+            width: 25px;
+            height: 25px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 5px;
+            img {
+              width: 100%;
+              vertical-align: top;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+    p.uploadTip {
+      position: absolute;
+      width: 154px;
+      height: 41px;
+      text-align: center;
+      color: #fff;
+      background: url(../images/downappbg.png) no-repeat;
+      left: 42px;
+      bottom: 50px;
+      line-height: 35px;
+    }
+  }
+  .rightSpike {
+    width: 871px;
+    height: 458px;
+    border: 1px solid #e7e7e7;
+    border-left: 0;
+    .timeTab {
+      width: 816px;
+      height: 66px;
+      border-bottom: 1px dashed #e7e7e7;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      .timeWrap {
+        height: 66px;
+        margin: 0 10px;
+        ul {
+          position: absolute;
+          width: 1071px;
+          margin-left: 25px;
+          li {
+            float: left;
+            width: 119px;
+            height: 45px;
+            color: #000;
+            padding-top: 18px;
+            cursor: pointer;
+            div {
+              float: left;
+              height: 100%;
+              color: #999;
+            }
+            div.readyTime {
+              color: #000;
+            }
+          }
+          li.activeEnd {
+            div {
+              border-bottom: 2px solid red;
+              font-size: 14px;
+              font-weight: 700;
+            }
+          }
+          li.activeRed {
+            div {
+              border-bottom: 2px solid red;
+              color: #ed4044;
+              font-size: 14px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+      .timeTabLeftArrow,
+      .timeTabRightArrow {
+        width: 20px;
+        height: 30px;
+        background: url(../images/index-ico.png) no-repeat -76px -16px;
+        position: absolute;
+        top: 22px;
+      }
+      .timeTabLeftArrow {
+        left: 0;
+      }
+      .timeTabRightArrow {
+        background-position: -57px -16px;
+        right: 0;
+      }
+    }
+    .spikeGoods {
+      margin-left: 15px;
+      position: relative;
+      .spikeGoodsWrap {
+        overflow: hidden;
+        position: relative;
+        height: 364px;
+        > ul {
+          position: absolute;
+          margin-top: 15px;
+          > li {
+            float: left;
+            width: 171px;
+            padding: 0 20px 20px;
+            > .saveImmediately {
+              font-weight: 500;
+              color: #fff;
+              font-size: 14px;
+              float: left;
+              margin-top: 5px;
+              margin-left: -8px;
+              box-sizing: border-box;
+              padding-top: 29px;
+              text-align: center;
+              height: 55px;
+              width: 55px;
+              background: url(../images/background/fqls.png) center no-repeat;
+              background-size: 100%;
+            }
+            > a {
+              img {
+                width: 155px;
+                height: 154px;
+                @include compatibleTransition(transform 0.5s ease);
+                &:hover {
+                  @include compatibleTransform(translateY(-7px));
+                }
+              }
+              .price {
+                color: #dd2727;
+                margin-top: 5px;
+                position: relative;
+                span:first-of-type {
+                  font-size: 20px;
+                }
+                span.del {
+                  margin-left: 5px;
+                  color: #999;
+                }
+                span:last-of-type {
+                  color: #b8b8b8;
+                  position: absolute;
+                  right: 0;
+                  top: 50%;
+                  margin-top: -6px;
+                }
+              }
+            }
+            > .rushToBuy {
+              text-align: center;
+              a {
+                display: inline-block;
+                margin-top: 39px;
+                color: #fff;
+                background: #ed4044;
+                width: 120px;
+                height: 30px;
+                line-height: 30px;
+                border-radius: 30px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+      > span {
+        width: 29px;
+        height: 64px;
+        position: absolute;
+        top: 122px;
+        z-index: 1;
+        background: url(../images/index-ico.png) no-repeat -12px -76px;
+      }
+      > span.spikeGoodsL {
+        left: -16px;
+      }
+      > span.spikeGoodsR {
+        background-position: -45px -76px;
+        right: -1px;
+      }
+    }
+  }
+}

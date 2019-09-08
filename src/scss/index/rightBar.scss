@@ -1,0 +1,328 @@
+@import "../_mixin/mixin.scss";
+.rightBar {
+  position: fixed;
+  width: 35px;
+  height: 100%;
+  background-color: #444;
+  right: 0px;
+  top: 0px;
+  z-index: 6;
+  .contentUp {
+    height: 472px;
+    top: 55px;
+    padding-top: 10px;
+    position: relative;
+    > li {
+      position: relative;
+      > a {
+        display: block;
+        background: url(../images/background/bar_new.png) no-repeat 0 -235px;
+      }
+      > a:hover {
+        background-color: #555;
+      }
+      > div {
+        display: none;
+      }
+      &:hover {
+        > div {
+          display: block;
+        }
+      }
+    }
+    > li.bagLi,
+    > li.orderLi,
+    > .sviewLi {
+      > a {
+        display: block;
+        width: 35px;
+        height: 35px;
+        background-position: 0 -235px;
+        &:hover {
+          background: url(../images/background/bar_newhover.png) no-repeat 0 -235px;
+        }
+      }
+      .bagBox,
+      .orderBox {
+        background: #fff;
+        width: 292px;
+        position: absolute;
+        right: 35px;
+        top: 0;
+        padding: 0 10px 10px 21px;
+        border: 1px solid #ccc;
+        > p {
+          text-align: center;
+          color: #000;
+          padding: 50px 0;
+          > a {
+            text-decoration: underline;
+            color: red;
+          }
+        }
+      }
+    }
+    > li.bagLi {
+      > a {
+        margin: 26px 0;
+      }
+    }
+    > li.orderLi {
+      > a {
+        background-position: 0 -305px;
+        &:hover {
+          background-position: 0 -305px;
+        }
+      }
+    }
+    > li.sviewLi {
+      > a {
+        background-position: -1px -693px;
+        &:hover {
+          background-position: -1px -693px;
+        }
+      }
+    }
+    > li.scart {
+      .cartview {
+        position: absolute;
+        width: 510px;
+        top: 0;
+        right: 35px;
+        z-index: 6;
+        cursor: default;
+        border: 1px solid #ccc;
+        background: #fff;
+        padding: 25px 15px 15px;
+        .cartTip {
+          margin-bottom: 20px;
+          font-weight: 700;
+          text-align: center;
+          font-size: 14px;
+        }
+        > .cartLists_div {
+          max-height: 300px;
+          overflow-y: auto;
+          > ul {
+            > li {
+              line-height: 18px;
+              border-bottom: 1px dashed #ddd;
+              margin-bottom: 10px;
+              padding-bottom: 10px;
+              > a.imgBox {
+                margin-right: 10px;
+                > img {
+                  width: 60px;
+                  border: 1px solid #ddd;
+                }
+              }
+              > div {
+                width: 380px;
+                > .des {
+                  a {
+                    color: #444;
+                    > em {
+                      color: #999;
+                    }
+                  }
+                }
+                > .price {
+                  color: red;
+                }
+                > .delBtn {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+        > div.cart_bt {
+          padding-top: 15px;
+          > p {
+            > span {
+              color: red;
+            }
+          }
+          > div {
+            > a {
+              height: 28px;
+              line-height: 28px;
+              background: #fff;
+              color: #f03e3e;
+              border: 1px solid #f03e3e;
+              display: inline-block;
+              padding: 0;
+              width: 70px;
+              text-align: center;
+              border-radius: 3px;
+              &.active {
+                color: #fff;
+                background: #f03e3e;
+              }
+            }
+          }
+        }
+      }
+    }
+    > li.scart,
+    > li.onlineService {
+      margin-bottom: 15px;
+      > a {
+        width: auto;
+        height: auto;
+        font-size: 12px;
+        padding: 5px 0 10px;
+        margin: 0;
+        background-image: none;
+        &::before {
+          content: "";
+          display: block;
+          width: 35px;
+          height: 35px;
+          background: url(../images/background/bar_new.png) no-repeat 0 -270px;
+        }
+        .rtNum {
+          width: 19px;
+          text-align: center;
+          margin: 0 auto;
+          color: #a6a6a6;
+          span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            background-color: #a6a6a6;
+            color: #444;
+          }
+        }
+      }
+    }
+    > li.onlineService {
+      > a {
+        &::before {
+          background-position: 2px -617px;
+        }
+      }
+    }
+    > li.scart:hover,
+    > li.onlineService:hover {
+      > a {
+        &::before {
+          background-image: url(../images/background/bar_newhover.png);
+          background-repeat: no-repeat;
+        }
+        > div {
+          color: #fff;
+          span {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .contentBt {
+    position: absolute;
+    bottom: 20px;
+    > li {
+      position: relative;
+      > a {
+        display: block;
+        width: 35px;
+        height: 35px;
+        background: url(../images/background/bar_new.png) no-repeat 0 -410px;
+        &:hover {
+          background: url(../images/background/bar_newhover.png) no-repeat 0 -410px;
+        }
+      }
+      > span {
+        display: none;
+      }
+      &:hover {
+        > span {
+          display: block;
+        }
+      }
+    }
+    > li.appLi {
+      span {
+        background: url(../images/background/app_code.png) no-repeat;
+        width: 187px;
+        height: 231px;
+        bottom: -12px;
+        right: 28px;
+        position: absolute;
+      }
+    }
+    > li.wxLi {
+      > a {
+        background-position: 0 -720px;
+        &:hover {
+          background-position: 0 -720px;
+        }
+      }
+      span {
+        background: url(../images/background/weixin1.jpg) no-repeat;
+        width: 188px;
+        height: 228px;
+        bottom: 0;
+        right: 35px;
+        position: absolute;
+        border: 1px #ddd solid;
+      }
+    }
+    > li.wbLi {
+      > a {
+        background-position: 0 -753px;
+        &:hover {
+          background-position: 0 -753px;
+        }
+      }
+      span {
+        background: url(../images/background/weibo.jpg) no-repeat;
+        width: 188px;
+        height: 129px;
+        bottom: 0;
+        right: 35px;
+        position: absolute;
+        border: 1px #ddd solid;
+      }
+    }
+    > li.toTop {
+      height: 35px;
+      > a {
+        background-position: 0 -521px;
+        &:hover {
+          background-position: 0 -521px;
+        }
+      }
+      > div.toTopTip {
+        height: 35px;
+        width: 90px;
+        line-height: 35px;
+        background-color: #ffa200;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        color: #fff;
+        padding-right: 10px;
+        right: 53px;
+        display: none;
+        opacity: 0;
+        // @include compatibleTransition(all 0.3s);
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: -4px;
+          top: 50%;
+          margin-top: -4px;
+          border-left: 4px solid #ffa200;
+          border-top: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+        }
+      }
+    }
+  }
+}

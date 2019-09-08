@@ -1,0 +1,178 @@
+@import "../_commont/reset.scss";
+@import "../_mixin/mixin.scss";
+
+body {
+  overflow-x: hidden;
+}
+.activeTop {
+  position: relative;
+  font-size: 0;
+  > img {
+    margin-left: -200px;
+  }
+  > .activeTopNav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-width: 1060px;
+    text-align: center;
+    background-color: #fef8ef;
+    color: #fff;
+    border-top: #357e34 solid 2px;
+    > ul {
+      > li {
+        display: inline-block;
+        padding: 12px 38px 8px 38px;
+        > a {
+          font-size: 14px;
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+.activeContent {
+  position: relative;
+  .imgBg {
+    position: fixed;
+    top: 0;
+    margin-left: -200px;
+    z-index: -1;
+  }
+  .modulesCon {
+    width: 1000px;
+    margin: auto;
+    padding-top: 5px;
+    > div.modulesDiv {
+      padding: 15px 26px 25px 31px;
+      margin-top: 30px;
+      border: 2px solid #fff;
+      background-color: #fff;
+      > .title {
+        padding-bottom: 16px;
+        margin-bottom: 15px;
+        background: url(../../images/activePage/cutLine.png) repeat-x left bottom;
+        > div {
+          display: inline-block;
+          > h3 {
+            font-size: 20px;
+            color: #444;
+            cursor: pointer;
+            &:hover {
+              color: #248dcc;
+            }
+          }
+          > p {
+            font-size: 12px;
+            color: #777777;
+          }
+        }
+      }
+      > .articles {
+        > ul {
+          margin-top: 15px;
+          margin-right: -6px;
+          > li {
+            position: relative;
+            float: left;
+            margin-right: 13px;
+            margin-bottom: 17px;
+            width: 300px;
+            height: 455px;
+            cursor: pointer;
+            background-color: #fff;
+            border: 1px solid #eaeaea;
+            text-align: left;
+            &:hover {
+              border: 1px solid #1fac75;
+            }
+            > a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              &:hover {
+                border: 1px solid #1fac75;
+              }
+              .picture {
+                position: relative;
+                .watch {
+                  position: absolute;
+                  text-align: center;
+                  bottom: 0;
+                  right: 0;
+                  padding: 0 10px;
+                  height: 25px;
+                  color: #fff;
+                  font-size: 12px;
+                  line-height: 25px;
+                  background-color: rgba(0, 0, 0, 0.4);
+                }
+              }
+              .des {
+                font-size: 16px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding: 20px 15px;
+                color: #333;
+              }
+              .artText {
+                overflow: hidden;
+                height: 45px;
+                text-overflow: ellipsis;
+                font-size: 14px;
+                padding: 12px;
+                line-height: 2;
+                color: #777;
+                > span {
+                  margin-left: 10px;
+                }
+                img {
+                  width: 12px;
+                  vertical-align: top;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    > div.more {
+      text-align: center;
+      margin: 30px 0 60px 0;
+    }
+  }
+}
+
+.stairs {
+  position: fixed;
+  z-index: 5;
+  right: 45px;
+  top: 50%;
+  margin-top: -236px;
+  color: #fff;
+  width: 120px;
+  text-align: center;
+  display: none;
+  > ul {
+    background-color: #1fac75;
+    > li {
+      position: relative;
+      line-height: 50px;
+      > img:first-of-type {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      > a {
+        color: #fff;
+        display: block;
+        font-size: 16px;
+      }
+      &.active{
+          background: darkseagreen;
+      }
+    }
+  }
+}

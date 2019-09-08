@@ -1,0 +1,150 @@
+@import "../_mixin/mixin.scss";
+.footer {
+  background: #f5f5f5;
+  .footerTop {
+    border-bottom: 1px solid #e5e5e5;
+    height: 100px;
+    ul {
+      padding: 19px 0;
+      li {
+        float: left;
+        a {
+          display: block;
+          width: 128px;
+          height: 62px;
+          padding-left: 72px;
+          line-height: 62px;
+          color: #444;
+          font-weight: 700;
+          font-size: 18px;
+          background: url(../images/footer/logo.png) 0 0 no-repeat;
+          @include compatibleTransition(all 0.8s ease);
+        }
+        a:hover {
+          @include compatibleTransform(translateY(-5px));
+        }
+        a.hh {
+          background-position: 0 -82px;
+        }
+        a.ck {
+          background-position: 0 -162px;
+        }
+        a.ps {
+          background-position: 0 -242px;
+        }
+        a.bs {
+          background-position: 0 -322px;
+        }
+        a.cj {
+          background-position: 0 -402px;
+        }
+      }
+    }
+  }
+  .footerWrap {
+    padding-top: 25px;
+    .info {
+      padding-bottom: 25px;
+      border-bottom: 1px solid #e5e5e5;
+      .leftInfo {
+        div {
+          margin-left: 30px;
+          h2 {
+            font-weight: 700;
+            color: #666;
+            font-size: 14px;
+          }
+          p:nth-child(2) {
+            margin-top: 15px;
+            color: #666;
+            font-size: 20px;
+            span {
+              font-size: 12px;
+              margin-left: 5px;
+            }
+          }
+					p:nth-child(3) {
+					  margin-top: 15px;
+						margin-bottom: 15px;
+					  color: #666;
+					  font-size: 20px;
+					  span {
+					    font-size: 12px;
+					    margin-left: 5px;
+					  }
+					}
+        }
+      }
+      .centerInfo {
+        margin-left: 40px;
+        > li {
+          float: left;
+          margin-right: 85px;
+          p {
+            font-weight: 700;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+          }
+          ul {
+            li {
+              margin-top: 5px;
+              a {
+                color: #444;
+                font-size: 14px;
+              }
+              a:hover {
+                color: #ed4044;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+      .rightInfo {
+        li {
+          float: left;
+          margin-right: 36px;
+          text-align: center;
+          img {
+            margin-top: 10px;
+          }
+        }
+        li:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+    .flink {
+      padding-top: 20px;
+      span:first-of-type {
+        margin-right: 5px;
+        color: #999;
+      }
+      span:last-of-type {
+        a {
+          display: inline-block;
+          margin: 0 15px 10px 0;
+          color: #999;
+        }
+      }
+    }
+    .support {
+      margin-top: 20px;
+      text-align: center;
+      a {
+        margin-right: 3px;
+      }
+    }
+    .footerCopy {
+      padding: 20px 0 40px;
+      color: #000;
+      p {
+        text-align: center;
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+}

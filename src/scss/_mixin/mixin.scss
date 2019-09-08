@@ -1,0 +1,23 @@
+@mixin compatibleTransform($args: scale(20) translateY(-10px) rotate(30deg)) {
+  -webkit-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  -moz-transform: $args;
+  transform: $args;
+}
+
+@mixin position_center {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+@mixin compatibleTransition($args: left 0.3s) {
+  transition: $args;
+  -moz-transition: $args;
+  -webkit-transition: $args;
+  -o-transition: $args;
+  -ms-transition: $args;
+}

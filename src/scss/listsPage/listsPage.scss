@@ -1,0 +1,98 @@
+@import "../_commont/reset.scss";
+@import "../_mixin/mixin.scss";
+
+// 列表渲染样式
+.listsUl {
+  margin-right: -35px;
+  margin-top: 10px;
+  > li {
+    float: left;
+    height: 358px;
+    width: 215px;
+    border: 1px solid #e6e6e6;
+    line-height: 18px;
+    margin: 5px 10px 10px 0;
+    background-color: #fff;
+    padding: 14px 10px 0;
+    position: relative;
+    > .country {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 30px;
+      height: 30px;
+      z-index: 1;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 1px solid #d7d7d7;
+      img {
+        margin-left: -10px;
+      }
+    }
+    > .imgDiv {
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    > .imgTab {
+      > ul {
+        > li {
+          float: left;
+          margin: 0 5px 5px 0;
+          width: 34px;
+          height: 34px;
+          border: 1px #ddd solid;
+          padding: 1px;
+          background-color: #fff;
+          img {
+            width: 30px;
+            height: 30px;
+          }
+          &.active {
+            border-color: #f90;
+          }
+        }
+      }
+    }
+    > .des {
+      display: block;
+      line-height: 17px;
+      height: 36px;
+      margin: 10px auto;
+      font-size: 14px;
+      color: #444;
+      &:hover {
+        color: #248dcc;
+      }
+    }
+    > .gprice {
+      margin-bottom: 10px;
+      line-height: 15px;
+      text-align: center;
+      color: #999;
+      .marketPrice {
+        text-decoration: line-through;
+      }
+      .price {
+        font-weight: 700;
+        color: #f60;
+      }
+    }
+    > .bottomP {
+      span {
+        padding-left: 4px;
+        padding-right: 15px;
+      }
+      span:last-of-type {
+        margin-left: 10px;
+      }
+    }
+    &:hover {
+      border: 1px solid #53aa5b;
+    }
+  }
+}

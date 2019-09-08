@@ -1,0 +1,669 @@
+@import "../_commont/reset.scss";
+@import "../_mixin/mixin.scss";
+/* 首页顶部 */
+.totalHeader{
+  background: #fff;
+}
+.header {
+  width: 100%;
+  height: 28px;
+  border-bottom: 1px solid #ddd;
+  background: #f5f5f5;
+  position: relative;
+  z-index: 5;
+}
+.headerWrap {
+  height: 28px;
+  line-height: 28px;
+}
+.headerLeft .headerL1 {
+  background: url(../images/epetbrand.png) no-repeat;
+  background-position: 0 8px;
+  display: inline-block;
+  height: 28px;
+  padding-left: 16px;
+  color: #444;
+  margin: 0 10px 0 5px;
+}
+.headerLeft .headerL1:hover {
+  color: #248dcc;
+}
+.headerLeft .headerL2 {
+  margin-left: -3px;
+}
+.headerLeft .headerL2 .placeText {
+  display: inline-block;
+  padding-left: 2px;
+  position: relative;
+  cursor: pointer;
+  color: #666;
+  z-index:0;
+}
+.headerLeft .headerL2 .placeText::after {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../images/xqico.png) 0 -30px no-repeat;
+  vertical-align: middle;
+  margin-left: -3px;
+}
+.headerLeft .headerL2 .placeText:hover::after {
+  background-position-y: -46px;
+  
+}
+.headerLeft .headerL2 .place {
+  width: 400px;
+  border: 1px solid #ddd;
+  padding: 5px 5px 15px;
+  background: #fff;
+  position: absolute;
+  display:none;
+}
+.headerLeft .headerL2 .place .tab {
+  height: 25px;
+  border-bottom: 1px solid #ddd;
+}
+.headerLeft .headerL2 .place .tab li {
+  float: left;
+  background: #f6f6f6;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
+  line-height: 24px;
+  color: #888;
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 3px;
+}
+.headerLeft .headerL2 .place .tab li.active {
+  background: #fff;
+  
+}
+.headerLeft .headerL2 .place .tabContent {
+  margin-top: 5px;
+  line-height: 15px;
+}
+.headerLeft .headerL2 .place .tabContent > div {
+  display: none;
+}
+.headerLeft .headerL2 .place .tabContent .rowList {
+  padding: 10px 10px 5px 10px;
+}
+.headerLeft .headerL2 .place .tabContent .rowList span {
+  color: #999;
+  border-right: 1px dotted #e8e8e8;
+  padding-right: 3px;
+}
+.headerLeft .headerL2 .place .tabContent a {
+  padding: 2px 10px;
+  color: #666;
+}
+.headerLeft .headerL2 .place .tabContent a.active,
+.headerLeft .headerL2 .place .tabContent a:hover {
+  background: green;
+  color: #fff;
+}
+.headerLeft .headerL2 .place .tabContent .tc2 a {
+  margin-top: 5px;
+  display: inline-block;
+}
+.headerLeft .headerL3 {
+  display: inline-block;
+  padding-left: 19px;
+  margin: 0 5px;
+  background: url(../images/bg.png) no-repeat -9px -425px;
+}
+.headerLeft .headerL3:hover {
+  color: #ff8500;
+}
+.headerLeft .headerL4 {
+  display: inline-block;
+  padding: 0 5px;
+}
+.headerLeft .headerL4 span {
+  color: #f60;
+}
+.headerLeft .headerL4:hover {
+  color: #248dcc;
+}
+.headerRight a {
+  color: #444;
+  vertical-align: middle;
+}
+.headerRight > li {
+  float: left;
+  padding: 0 5px;
+  position: relative;
+}
+.headerRight > li > a:hover {
+  color: #248dcc;
+}
+.headerRight > li.carts::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background: url(../images/bg.png) no-repeat -291px -46px;
+}
+.headerRight > li.carts span {
+  color: red;
+}
+.headerRight > li.myEpet::before,
+.headerRight > li.collection::before,
+.headerRight > li.phone::before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  vertical-align: middle;
+  margin-right: 5px;
+  background: url(../images/bg.png) no-repeat -312px -46px;
+}
+.headerRight > li.myEpet::after,
+.headerRight > li.collection::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  position: relative;
+  top: 2px;
+  border: transparent solid 4px;
+  border-top: #717171 solid 4px;
+  transition: all 0.5;
+}
+.headerRight > li.myEpet:hover::after,
+.headerRight > li.collection:hover::after {
+  transition: transform 0.2s ease-in;
+  transform: rotate(180deg);
+  transform-origin: 50% 25%;
+}
+.headerRight > li.collection::before {
+  background-position: -353px -46px;
+  width: 15px;
+  margin-right: 4px;
+}
+.headerRight > li.phone::before {
+  background-position: -334px -46px;
+  margin-right: 2px;
+}
+.headerRight > li.phone .codeImg {
+  display: none;
+  position: absolute;
+}
+.headerRight > li.phone:hover .codeImg {
+  display: block;
+}
+.headerRight > li.problem > a {
+  color: red;
+}
+.headerRight > li.problem > a:hover {
+  color: #248dcc;
+}
+.headerRight > li.myEpet > ul,
+.headerRight > li.collection > ul {
+  border-top: 0;
+  position: absolute;
+  left: -1px;
+  top: 26px;
+  float: left;
+  padding: 5px 10px;
+  display: none;
+  background-color: #fff;
+  box-shadow: 3px 3px 4px #777;
+}
+.headerRight > li.myEpet:hover > ul,
+.headerRight > li.collection:hover > ul {
+  display: block;
+}
+.headerRight > li.myEpet > ul > li,
+.headerRight > li.collection > ul > li {
+  line-height: 12px;
+  padding: 0 10px;
+  width: 60px;
+  margin: 5px 0;
+  background: url(../images/bg2.png) no-repeat 0 -260px;
+}
+.headerRight > li.myEpet > ul > li:hover a,
+.headerRight > li.collection > ul > li:hover a {
+  color: #248dcc;
+}
+
+/* 搜索框部分*/
+.searchDiv {
+  padding-top: 10px;
+  height: 100px;
+  .logo {
+    height: 94px;
+    width: 268px;
+    a {
+      display: inline-block;
+      width: 268px;
+      height: 94px;
+      background: url(../images/epet-logo.png) no-repeat 0 -12px;
+      margin-top: 7px;
+    }
+  }
+  .search2 {
+    margin: 23px 0 0 33px;
+    .searchInput input {
+      border: #459d36 solid 2px;
+      padding: 0 5px 0 15px;
+      width: 382px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+      float: left;
+      color: #999;
+    }
+    .btn {
+      width: 73px;
+      height: 34px;
+      border: 0;
+      cursor: pointer;
+      background-color: #459d36;
+      color: #fff;
+      font-size: 14px;
+    }
+    .keywords {
+      margin: 10px 0;
+      color: #999;
+      ul > li {
+        float: left;
+        padding-right: 10px;
+        margin-right: 10px;
+        border-right: 1px solid #999;
+        a {
+          color: #999;
+        }
+        a.active {
+          color: red;
+        }
+        a:hover {
+          color: #333;
+        }
+      }
+      ul > li.noborder {
+        border-right: 0;
+      }
+    }
+  }
+  .carts {
+    margin-top: 23px;
+    width: 130px;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    text-indent: 2em;
+    background: url(../images/shopping-cart.gif) no-repeat;
+    a span {
+      color: #f40;
+    }
+  }
+}
+
+// 顶部导航样式
+
+.topNav {
+  background: #fff;
+  padding-top: 10px;
+  position: relative;
+  z-index: 1;
+  .leftNav {
+    & > li {
+      float: left;
+      width: 112px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      border: 1px solid #e1e1e1;
+      color: #666;
+      cursor: pointer;
+      position: relative;
+      .title {
+        font-size: 16px;
+      }
+    }
+    & > li::after {
+      content: "";
+      width: 16px;
+      height: 13px;
+      display: inline-block;
+      margin-left: 5px;
+      background: url(../images/bg2.png) -17px -1257px;
+      @include compatibleTransition(transform 0.2s ease-in);
+    }
+    & > li.active::after {
+      @include compatibleTransform(rotate(180deg));
+      transform-origin: 50% 50%;
+      background-position: -0 -1257px;
+    }
+    & > li.active {
+      color: #fff;
+      background: rgb(70, 171, 80);
+    }
+    & > li:first-of-type {
+      ul {
+        position: absolute;
+        li {
+          width: 228px;
+          height: 150px;
+          text-align: center;
+          background: #fff;
+          padding-top: 30px;
+          position: relative;
+          .choiceImg {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            background: url(../images/new_petcate.png) no-repeat 0 -180px;
+          }
+          p:nth-child(2) {
+            line-height: 24px;
+            padding-bottom: 4px;
+            color: #333;
+            span {
+              color: #f03e3e;
+            }
+          }
+          p:nth-child(3) {
+            border: 1px solid #aeaeae;
+            color: #aeaeae;
+            width: 108px;
+            height: 28px;
+            margin: 0 auto;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 3px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+          p:nth-child(3):hover {
+            color: #aeaeae;
+            background: #ebebeb;
+          }
+          div.showLeftDiv {
+            position: absolute;
+            width: 27px;
+            top: 0;
+            left: 0;
+            @include compatibleTransition(left 0.3s);
+            z-index: -1;
+            a {
+              display: block;
+            }
+          }
+        }
+        li:hover {
+          div.showLeftDiv {
+            left: -27px;
+          }
+        }
+        li:first-of-type {
+          background: #f5f5f5;
+        }
+        li:last-of-type {
+          .choiceImg {
+            background-position: 0 -60px;
+          }
+          p:nth-child(3) {
+            border: 1px solid #e74085;
+            color: #e74085;
+          }
+          p:nth-child(3):hover {
+            color: #fff;
+            background: #e74085;
+          }
+        }
+      }
+    }
+    & > li:last-of-type::after {
+      width: 13px;
+      height: 7px;
+      background: url(../images/bg2.png) -17px -1276px;
+    }
+    & > li:last-of-type {
+      &.active::after {
+        background-position: -0 -1276px;
+      }
+      > ul {
+        display: none;
+        width: 228px;
+        height: 359px;
+        background: #fcfcfc;
+        position: absolute;
+        top: 34px;
+        right: -2px;
+        > li {
+          height: 51px;
+          background: url(../images/background/menuLine1.png) 50% bottom no-repeat;
+          > h3 {
+            padding-left: 16px;
+            padding-left: 16px;
+            font-weight: 400;
+            height: 50px;
+            line-height: 50px;
+            background: #fcfcfc url(../images/bg2.png) no-repeat right -1206px;
+            &:hover {
+              height: 49px;
+              line-height: 49px;
+              border-top: 1px solid #62a727;
+              border-bottom: 1px solid #62a727;
+              border-right: 2px solid #fff;
+              position: relative;
+              z-index: 1;
+              margin-right: -1px;
+              background: none;
+            }
+            > a {
+              font-size: 14px;
+              margin-right: 16px;
+              text-align: left;
+              float: left;
+              width: 88px;
+              height: 50px;
+              color: #444;
+            }
+          }
+          > div.twoNav {
+            border: 1px solid #62a727;
+            background: #fff;
+            width: 570px;
+            position: absolute;
+            top: 0;
+            left: 228px;
+            // display: none;
+            line-height: 30px;
+            padding: 10px;
+            min-height: 358px;
+            > .topLists,
+            > .bottomLists {
+              > .title {
+                padding-left: 10px;
+                height: 35px;
+                padding-bottom: 5px;
+                margin-bottom: 5px;
+                border-bottom: 1px #ddd dotted;
+                text-align: left;
+                img {
+                  width: 35px;
+                  height: 35px;
+                  vertical-align: middle;
+                }
+                a {
+                  font-size: 16px;
+                  vertical-align: middle;
+                  padding-left: 10px;
+                  &::after {
+                    content: "";
+                    vertical-align: top;
+                    display: inline-block;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    background: url(../images/bg.png) -470px -240px no-repeat;
+                  }
+                }
+              }
+              > div {
+                padding-bottom: 5px;
+                margin-bottom: 5px;
+                border-bottom: 1px #ddd dotted;
+                > span {
+                  width: 150px;
+                  text-align: right;
+                  padding-right: 10px;
+                  height: 25px;
+                  line-height: 25px;
+                  a {
+                    color: green;
+                    font-weight: 700;
+                    padding-right: 10px;
+                  }
+                  img {
+                    vertical-align: middle;
+                    height: 25px;
+                    width: 25px;
+                  }
+                }
+                > ul {
+                  > li {
+                    float: left;
+                    > a {
+                      display: inline-block;
+                      padding: 0 6px 0 7px;
+                      border-left: 1px #ddd solid;
+                      height: 16px;
+                      line-height: 16px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          > div {
+            display: none;
+          }
+          &:hover {
+            > div {
+              display: block;
+            }
+          }
+        }
+        > li:last-of-type {
+          > h3 {
+            color: #22990d;
+            > img {
+              vertical-align: middle;
+            }
+            > span {
+              padding: 0 9px;
+              border-radius: 8px;
+              background: #fb6003;
+              color: #fff;
+              margin-left: 10px;
+            }
+          }
+          > .bottomNavCon {
+            position: absolute;
+            left: 228px;
+            top: 0;
+            background: #fff;
+            width: 756px;
+            padding: 10px 8px 0;
+            height: 442px;
+            box-shadow: 3px 3px 4px #777;
+            border: 1px solid #62a727;
+            > ul {
+              > li {
+                float: left;
+                width: 364px;
+                height: 172px;
+                position: relative;
+                margin: 5px;
+                > a {
+                  > img {
+                    width: 364px;
+                    height: 172px;
+                  }
+                  > div {
+                    background: url(../images/background/textbg2.png) no-repeat;
+                    width: 74px;
+                    height: 25px;
+                    line-height: 25px;
+                    position: absolute;
+                    right: 0;
+                    bottom: 10px;
+                    font-size: 12px;
+                    color: #fff;
+                    padding-left: 20px;
+                  }
+                }
+              }
+            }
+            p {
+              height: 24px;
+              padding: 18px 0 10px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  .rightNav {
+    li {
+      float: left;
+      a {
+        height: 34px;
+        float: left;
+        line-height: 34px;
+        font-size: 16px;
+        color: #000;
+        font-weight: 700;
+        padding: 0 20px;
+        img {
+          margin-top: -2px;
+        }
+      }
+			
+      a::before {
+        content: "";
+        display: inline-block;
+        width: 13px;
+        height: 17px;
+        background: url(../images/bg2.png) -35px -1280px;
+        vertical-align: middle;
+        margin-top: -2px;
+        margin-right: 6px;
+      }
+      a:hover {
+        color: #409b49;
+        &::before {
+          @include compatibleTransition(transform 0.2s ease-in);
+          @include compatibleTransform(rotate(360deg));
+        }
+      }
+    }
+		
+    li:first-of-type {
+      a {
+        padding: 0 0 0 25px;
+        font-size: 0;
+      }
+      a::before {
+        display: inline;
+      }
+    }
+		
+  }
+}
